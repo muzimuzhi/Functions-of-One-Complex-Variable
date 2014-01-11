@@ -1,0 +1,8 @@
+\documentclass{book}
+\usepackage{amsmath, amssymb}
+\title{My First LaTeX Document in GitHub}
+\author{muzimuzhi}
+\begin{document}
+  \maketitle
+  It is my first LaTeX Document in GitHub, so exciting!
+\end{document}
