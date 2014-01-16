@@ -1,0 +1,409 @@
+\documentclass[GBK,12pt,draft]{ctexart}
+
+\usepackage{CJKspace} % 仅删除汉字之间的空格而保留其它空格
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{verbatim}
+\usepackage[a4paper]{geometry}
+\geometry{scale={0.7,0.8}, nohead}
+
+\DeclareMathOperator{\RE}{Re}
+\DeclareMathOperator{\IM}{Im}
+\newcommand{\dd}{\; \mathrm{d}}
+\newcommand{\dis}{\displaystyle}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\ii}{\mathrm{i}}  % set the ``i'' in math environment upright
+\newcommand{\ee}{\mathrm{e}}  % set the ``e'' in math environment upright
+\newcommand{\set}[1]{\left\{#1\right\}}
+
+\CTEXsetup[name={,、}, number=\chinese{subsection}, format=\bfseries \normalsize]{subsection}
+% 设置 \subsection 章节编号的数字样式为中文，编号后自动加上中文顿号
+\CTEXsetup[name={（,）}, number=\arabic{subsubsection}, format=\normalsize]{subsubsection}
+% 设置 \subsubsection 章节编号前后自动加上中文括号
+% 设置 \subsubsection 章节标题的全局格式为不加粗（其他照抄缺省设置）
+
+\setcounter{tocdepth}{1}
+
+\begin{document}
+
+\title{\textbf{061B0020 复变函数与积分变换} \\ \Large 课程期末考试试卷}
+\author{muzimuzhi}
+\maketitle
+\pagestyle{plain}
+\tableofcontents
+
+\section{2012-2013学年~秋学期}
+% 文字叙述仿照09-10秋试卷
+  \subsection{复数及复函数}
+    \subsubsection{求复数 $\rm{Ln} \big[(1+\ii)(-1+\ii)\big]$ 的实部与虚部;}
+
+    \subsubsection{求解方程 $(1+z)^5=(1-z)^5$, 写出解的实部与虚部;}
+
+    \subsubsection{指出函数 $f(z)=(x^2+y^2-x)+\ii(2xy-y^2)$ 在何处可导, 何处解析, 并在可导处求出其导数;}
+
+    \subsubsection{找出函数 $\dis f(z) = \frac{z-1}{1+z} \sin \frac{1}{z^2}$ 的孤立奇点, 并求出其留数.}
+
+  \subsection{积分}
+    \subsubsection{$\dis \int\limits_C {\ee ^z}\dd z$, 其中 $C:z=\alpha t,\,t\in [0,+\infty),\,\RE \alpha < 0$;}
+
+    \subsubsection{$\dis \oint\limits_{\abs{z} = (n+\frac{1}{2})\pi}{z^2\cot z}\dd z$;
+    \qquad
+    （3）\quad$\dis \int_{-\infty}^{+\infty}{\frac{1+\cos x}{x^2-2x+2}}\dd x$.
+    }
+
+   % \subsubsection{$\dis \int_{-\infty}^{+\infty}{\frac{1+\cos x}{x^2-2x+2}}\dd x$.}
+
+  \subsection{级数}
+    \subsubsection{将函数 $\dis f(z) = \frac{1}{z(z^2-1)(z-2)}$ 在圆环 $1<\abs{z}<2$ 内展开成罗朗级数;}
+
+    \subsubsection{将函数 $\dis f(z) = \ee^z \cos z$ 展开为麦克劳林级数.}
+
+  \subsection{保角映射}
+    \subsubsection{试作保角映射 $w=w(z)$, 把第一象限映成单位圆内部, 且 $w(1+\ii)=0,\,w(\ii)=\ii$;}
+
+    \subsubsection{求将区域 $\dis \set{z;\,\,\abs{z}<\sqrt{2}, \abs{z+2}<\sqrt{2}}$ 映为上半平面的一个保角映射 $w=w(z)$.}
+
+  \subsection{拉氏变换}
+    \subsubsection{求 $Laplace$ 变换 $\dis \mathcal{L} \left\{f(t)\right\}$, 其中 $\dis f(t) = t^2-\int_0^\infty{\cos \tau \ee^{t-\tau}}\dd t$;}
+
+    \subsubsection{求 $Laplace$ 逆变换 $\dis \mathcal{L}^{-1} \left\{F(s)\right\}$, 其中 $\dis F(s) = \frac{\ee^{-s}}{(s-1)(s^2-2s+5)}$.}
+
+  \subsection{证明}
+    已知 $f(z)=u+\ii v$ 在区域 $D$ 内解析, 且有 $v=-u^2$, 求证 $f(z)$ 在区域 $D$ 内必为常数.
+
+\newpage
+\section{2009-2010学年~秋学期}
+  \subsection{（每题8分，共32分）}
+    \subsubsection{求复数 $(1+\ii)^\ii$ 的实部与虚部;}
+
+    \subsubsection{求解方程 $\cos z = 2$, 写出解的实部与虚部;}
+
+    \subsubsection{指出函数 $f(z) = x^2+\ii y^2$ 在何处可导, 何处解析, 并在可导处求出其导数;}
+
+    \subsubsection{找出函数 $\dis f(z) = z^k \ee^{\frac{1}{z}}\quad(k\in\mathbb{N})$ 的孤立奇点, 并求出其留数.}
+
+  \subsection{计算积分（每题9分，共18分）}
+    \subsubsection{$\dis \oint\limits_{\abs{z}=1}{\frac{z+2}{1-\cos z}}\dd z$;}
+
+    \subsubsection{$\dis \int_0^{2\pi}{\frac{1}{2+\cos \theta +\sin \theta}}\dd \theta$.}
+
+  \subsection{（16分）}
+    \subsubsection{请在奇点处将 $\dis f(z) = z\sin \frac{1}{z+1}$ 展开成罗朗级数;}
+
+    \subsubsection{将函数 $\dis f(z) = \frac{1}{(z-1)^2}+\frac{1}{(z+1)^2}$ 在圆环 $2<\abs{z-1}<\infty$ 内展开成罗朗级数.}
+
+  \subsection{（12分）}
+    试作保角映射 $w=w(z)$ 把 $\abs{z-\ii}<\sqrt{2}$ 及 $\abs{z+\ii}<\sqrt{2}$ 的公共部分映成 $\abs{w}<1$, 且 $w(0)=0,\,\arg w'(0)=0$.
+
+  \subsection{（16分）}
+    \subsubsection{求 $Laplace$ 变换 $\dis \mathcal{L} \left\{f(t)\right\}$, 其中 $\dis f(t) = k-t\ee^{t-t_0}$;}
+
+    \subsubsection{求 $Laplace$ 逆变换 $\dis \mathcal{L}^{-1} \left\{F(s)\right\}$ ,其中 $\dis F(s) = \frac{2\ee^{-s}}{(s+1)(s^2+1)}$.}
+
+  \subsection{（6分）}
+    设 $f(z)=u(x,y)+\ii v(x,y)$ 是整函数, 且 $u(x,y)\geq c$, 求证 $f(z)$ 是常数.
+
+\newpage
+\section{2008-2009学年~秋学期}
+% 未输入
+  \subsection{计算与简答（每题6分，共24分）}
+    \subsubsection{计算复数 $(1+\ii)^\ii$ 的值;}
+
+    \subsubsection{计算函数 $\dis f(z)=\frac{1}{z\sin z} $ 在所有奇点处的留数.}
+
+    \subsubsection{记 $C$ 是单连通区域中的一条简单闭曲线, $\dis \oint\limits_C{f(z)}\dd z=0$, 问 $f(z)$ 在 $C$ 内部是否一定解析? 举例说明你的结论;}
+
+    \subsubsection{已知 $\dis u=x^2+xy+ky^2$, $k$ 取什么值时 $u(x,y)$ 是调和函数.}
+
+  \subsection{计算积分（每题7分，共28分）}
+    \subsubsection{$\dis \int\limits_{C}{\frac{\ln (z+1)}{z+1}}\dd z$, 其中 $C$ 是连接从 $1$ 到 $\ii$ 的直线段;
+    （3）$\dis \oint\limits_{\abs{z}=1}{\tan \pi z}\dd z$;
+    }
+
+    \subsubsection[3]{$\dis \oint\limits_{\abs{z}=2}{\frac{\sin \pi z}{(z-1)^4}}\dd z$;
+    \qquad
+    （4）\quad$\dis \int_{0}^{+\infty}{\frac{\cos x}{(x^2+1)(x^2+2)}}\dd x$.
+    }
+
+    % \subsubsection{$\dis \oint\limits_{\abs{z}=1}{\tan \pi z}\dd z$;}
+
+    % \subsubsection{$\dis \int_{0}^{+\infty}{\frac{\cos x}{(x^2+1)(x^2+2)}}\dd x$.}
+
+  \subsection{（14分）}
+    \subsubsection{求函数 $\dis f(z) = \ln (2-3z+z^2)$ 的麦克劳林级数;}
+
+    \subsubsection{将函数 $\dis f(z) = \frac{z^2-2z+5}{(z-2)(z^2+1)}$ 在圆环 $2<\abs{z}<\infty$ 内展开为罗朗级数.}
+
+  \subsection{（16分）}
+    \subsubsection{求将区域 $\dis \set{z; \,\, 0<\arg z<\pi /2,\,\abs{z}<1}$ 映为上半平面的一个保角映射 $w=w(z)$;}
+
+    \subsubsection{求将单位圆内部映为上半平面, 且 $w(0)=\ii,\,\arg w'(0)=\pi / 2$ 的保角映射 $w=w(z)$.}
+    % or 分式线性映射？
+  \subsection{（14分）求下列函数的拉普拉斯变换}
+    \subsubsection{求 $Laplace$ 变换 $\dis \mathcal{L} \left\{f(t)\right\}$, 其中 $\dis f(t) = \abs{\sin t}$;}
+
+    \subsubsection{求 $Laplace$ 逆变换 $\dis \mathcal{L}^{-1} \left\{F(s)\right\}$, 其中 $\dis F(s) = \ln \frac{s^2}{s^2+1}$.}
+
+  \subsection{（6分）}
+    设函数 $f(z)$ 在 $z=a$ 点解析, 且级数 $\dis \sum_{n=0}^\infty {f^{(n)}(a)}$ 收敛, 证明: $f(z)$ 在 $a$ 点展开 的 $Taylor$ 级数的和函数是整函数.
+
+\newpage
+\section{2007-2008学年~夏学期}
+  \subsection{（每题7分，共21分）}
+    \subsubsection{设 $w_k, k=1,2,\ldots ,n$ 为方程 $z^n=a$ 的 $n$ 个根 $(n\geq 1)$, 求和 $\dis \sum_{k=1}^n{w_k}$ ;}
+
+    \subsubsection{指出函数 $f(z)=r^2+3r\cos \theta +1+\ii r\sin \theta$ 在何处可导, 何处解析;}
+
+    \subsubsection{找出函数 $\dis f(z) = \frac{z^2}{z+2} \sin \frac{1}{z}$ 的孤立奇点, 并求出其留数.}
+
+  \subsection{计算积分（每题7分，共28分）}
+    \CTEXnoindent
+    \begin{tabular}{@{}l l}
+      （1）\quad$\dis \oint\limits_{\abs{z}=1}{\left(\frac{\abs{z}}{z}-z^2 \ee^z \sin z \right)}\dd z$; &
+      \qquad（3）\quad$\dis \int_{-\infty}^{+\infty}{\frac{\cos x}{x^4+2x^2+1}}\dd x$; \\
+      （2）\quad$\dis \oint\limits_{\abs{z}=7}{\frac{1}{\ee^z-1}}\dd z$; &
+      \qquad（4）\quad$\dis \oint\limits_{\abs{z}=2}{\frac{\ln (z+3)}{\abs{z-1}^2}}\dd z$.
+    \end{tabular}
+  \subsection{（15分）}
+    \subsubsection{将函数 $\dis f(z) = \frac{\sin z}{\cos 2z}$ 在 $z=0$ 处展开为泰勒级数(展开到 $z^3$ ), 并指出其收敛半径;}
+
+    \subsubsection{求函数 $\dis f(z) = \ln\frac{z}{z-1}$ 在圆环 $1<\abs{z-1}<+\infty$ 内的罗朗级数.}
+
+  \subsection{（16分）}
+    \subsubsection{问映射 $\dis w=\frac{2-z}{z}$ 将区域 $\set{z;\,\,\abs{z-1-\ii}<\sqrt{2},\,\IM z>0}$ 映为 $W$ 平面上的什么区域.}
+
+    \subsubsection{求将单位圆内映为上半平面, 且 $w(1/2)=\ii,\,w(1)=0$ 的一个保角映射 $w=w(z)$.}
+
+  \subsection{（14分）求下列函数的拉普拉斯变换}
+    \subsubsection{求 $Laplace$ 变换 $\dis \mathcal{L} \left\{f(t)\right\}$, 其中 $\dis f(t) = \int_0^t{\frac{\ee^\tau-\ee^{-\tau}}{\tau}\cos(t-\tau)}\dd \tau$;}
+
+    \subsubsection{求 $Laplace$ 逆变换 $\dis \mathcal{L}^{-1} \left\{F(s)\right\}$, 其中 $\dis F(s) = \ee^{-s} \frac{s}{(s+1)^2}$.}
+
+  \subsection{（6分）}
+    设 $f(z)$ 在区域 $D$ 内连续且积分与路径无关, 证明: $f(z)$ 在 $D$ 内解析.
+
+\newpage
+\section{2007-2008学年~春学期}
+% 第一、二大题的分数不对
+  \subsection{（每题7分，共21分）}
+    \subsubsection{求复数 $\dis \left(1-\ii\sqrt{3}\right)^{20}$ 的实部与虚部;}
+
+    \subsubsection{已知 $f(z) = u(x,y)+\ii v(x,y)$ 为解析函数, 证明: $xu(x,y)-yv(x,y)$ 是调和函数;}
+
+    \subsubsection{找出函数 $\dis f(z) = \frac{1}{(z+1)^2} \sin \frac{1}{z}$ 的孤立奇点, 并求出各点的留数.}
+
+  \subsection{计算积分（每题7分，共28分）}
+    \subsubsection{$\dis \int\limits_C{\bar{z}\,\RE z}\dd z$, 其中 $C$ 是从 $-1$ 到 $1$ 的上半单位圆;}
+
+    \subsubsection{$\dis \oint\limits_{\abs{z}=1}{\frac{\sin z + \ee^z}{z^4}}\dd z$;}
+
+    \subsubsection{$\dis \oint\limits_{\abs{z}=2}{\frac{z+1}{(z-1)\cos z}}\dd z$;
+    \qquad
+    （4）\quad$\dis \int_{0}^{\pi}{\tan (\theta +\ii)}\dd \theta$.}
+
+   % \subsubsection{$\dis \int_{0}^{\pi}{\tan (\theta +\ii)}\dd \theta$.}
+
+  \subsection{（15分）}
+    \subsubsection{求函数 $\dis f(z) = \ee^{z^2} \cos z^2$ 在 $z=0$ 处的泰勒级数, 并指出其收敛半径;}
+
+    \subsubsection{将函数 $\dis f(z) = \cos \frac{z}{z+1}$ 在圆环 $0<\abs{z+1}<+\infty$ 内展开为罗朗级数%(计算 $z$ 到 $z^3$ 的系数).
+    }
+
+  \subsection{（16分）}
+    \subsubsection{求将区域 $\dis \set{z; \,\, \abs{z-1}<\sqrt{2},\,\abs{z+1}<\sqrt{2}}$ 映为单位圆内部, 且 $w(0)=0$ 的一个保角映射 $w=w(z)$;}
+
+    \subsubsection{求将单位圆内映为单位圆内的保角映射 $w=w(z)$, 且 $w(1/2)=1/2,\,w'(1/2)<0$.}
+
+  \subsection{（14分）求下列函数的拉普拉斯变换}
+    \subsubsection{求 $Laplace$ 变换 $\dis \mathcal{L} \left\{f(t)\right\}$, 其中 $\dis f(t) = t\int_0^t{\ee^{2t-\tau}\cos \tau }\dd \tau$;}
+
+    \subsubsection{求 $Laplace$ 逆变换 $\dis \mathcal{L}^{-1} \left\{F(s)\right\}$, 其中 $\dis F(s) = \ee^{-s}\ln \frac{s^2+1}{s^2-2s+2}$.}
+
+  \subsection{（6分）}
+    设级数 $\dis \sum_{n=0}^{+\infty}{2^nc_n}$ 收敛, $\dis \sum_{n=0}^{+\infty}{2^n \abs{ c_n}}$ 发散,
+    证明: $\dis \sum_{n=0}^{+\infty}{c_nz^n}$ 的收敛半径 $R=2$.
+
+\newpage
+\section{2007-2008学年~春学期~B卷}
+% 分值、题干中文叙述有改动
+  \subsection{（每题7分，共21分）}
+    \subsubsection{求复数 $\ee^{2z+1}$ 的实部与虚部, $z=x+\ii y,\quad x,y\in \mathbb{R}$;}
+
+    \subsubsection{求解方程 $z^4+\ii=0$;}
+
+    \subsubsection{求所有具有形式 $u=f(x^2+y^2)$ 的调和函数.}
+
+  \subsection{计算积分（每题7分，共28分）}
+    \CTEXnoindent
+    \begin{tabular}{@{}l l}
+      （1）\quad$\dis \oint\limits_{\abs{z}=1}{\frac{\cos z}{z^5}}\dd z$; &
+      \qquad（3）\quad$\dis \int_{-\infty}^{+\infty}{\frac{\cos x +1}{2-2x+x^2}}\dd x$; \\
+      （2）\quad$\dis \oint\limits_{\abs{z}=2}{\frac{z^2+z}{z(z-1)}}\dd z$; &
+      \qquad（4）\quad$\dis \oint\limits_{\abs{z}=2}{\frac{z\ee^z}{\abs{z-1}^2}}\dd z$.
+    \end{tabular}
+  \subsection{（15分）}
+    \subsubsection{求函数 $\dis f(z) = \sin z^2$ 的麦克劳林级数, 并指出其收敛半径;}
+
+    \subsubsection{将函数 $\dis f(z) = \frac{1+z^2}{\sin z}$ 在圆环 $0<\abs{z}<\pi$ 内展开为罗朗级数(计算到 $z^3$ 的系数).}
+
+  \subsection{（16分）}
+    \subsubsection{求将单位圆内映为单位圆内的保角映射 $w=w(z)$, 且 $w(1/2)=0,$ \\  $w'(1/2)>0$;}
+
+    \subsubsection{求将区域 $\dis \set{z; \,\, 0<\arg z<\pi /3,\,\abs{z}<1}$ 映为上半平面的一个保角映射 $w=w(z)$.}
+
+  \subsection{（14分）求下列函数的拉普拉斯变换}
+    \subsubsection{求 $Laplace$ 变换 $\dis \mathcal{L} \left\{f(t)\right\}$, 其中 $\dis f(t) = \int_0^t{\ee^{t-\tau}\tau \sin \tau}\dd \tau$;}
+
+    \subsubsection{求 $Laplace$ 逆变换 $\dis \mathcal{L}^{-1} \left\{F(s)\right\}$, 其中 $\dis F(s) = \frac{s+1}{s^2(s-1)}$.}
+
+  \subsection{（6分）}
+    设幂级数 $\dis \sum{c_nz^n}$ 的收敛半径为 $R$, 证明: 幂级数在圆周 $\abs{z}=R$ 上处处绝对收敛或处处不绝对收敛.
+
+\newpage
+\section{2007-2008学年~冬学期~B卷}
+% 分值、题干中文叙述有改动
+  \subsection{（每题7分，共28分）}
+    \subsubsection{把复数 $\sqrt{3}+\ii$ 用指数形式表示;}
+
+    \subsubsection{求解方程 $\sinh z=2\ii$;}
+
+    \subsubsection{已知 $f(z)=u(x,y)+\ii v(x,y)$ 为解析函数, 且 $xu+yv=(x^2+y^2)\ee^x\cos y$, 求 $f(z)$;}
+
+    \subsubsection{找出函数 $\dis f(z) = \frac{1}{z} \ee^{\frac{1}{z+1}}$ 的孤立奇点, 并求出其留数.}
+
+  \subsection{计算积分（每题7分，共21分）}
+    \subsubsection{$\dis \int\limits_{C}{\bar{z} \IM z}\dd z$, 其中 $C$ 是从原点 $0$ 到 $1+\ii$ 的直线段;}
+
+    \subsubsection{$\dis \oint\limits_{\abs{z}=2}{\frac{z^2+1}{z\cos z}}\dd z$;
+    \qquad
+    （3）\quad$\dis \int_{-\infty}^{+\infty}{\frac{\sin x}{x+\ii}}\dd x$.
+    }
+
+   % \subsubsection{$\dis \int_{-\infty}^{+\infty}{\frac{\sin x}{x+\ii}}\dd x$.}
+
+  \subsection{（15分）}
+    \subsubsection{求 $\dis f(z) = \frac{2(z+1)}{z(z+2)}$ 在 $z=-1$ 处展开的泰勒级数, 并指出其收敛半径;}
+
+    \subsubsection{将 $\dis f(z) = \frac{1}{\sin z}$ 在 $0<\abs{z}<\pi$ 内展开为罗朗级数(计算 $z$ 到 $z^3$ 的系数).}
+
+  \subsection{（16分）}
+    \subsubsection{求将区域 $\set{z; \,\,0<\arg z<\pi /4,\,\abs{z}<2}$ 映为上半平面的一个保角映射 $w=w(z)$;}
+    % 题中为 \ii/4, 显然错误
+
+    \subsubsection{求将单位圆内映为单位圆内的保角映射 $w=w(z)$, 且 $w(1/2)=1/2,\,\arg w'(1/2)=\pi/2$.}
+
+  \subsection{（14分）求下列函数的拉普拉斯变换}
+    \subsubsection{求 $Laplace$ 变换 $\dis \mathcal{L} \left\{f(t)\right\}$, 其中 $\dis f(t) = \ee^t \int_0^t{\tau \sin(t-\tau)}\dd \tau$;}
+
+    \subsubsection{求 $Laplace$ 逆变换 $\dis \mathcal{L}^{-1} \left\{F(s)\right\}$, 其中 $\dis F(s) = \frac{\ee^{-s}}{(s-1)(s^2+1)}$.}
+
+  \subsection{（6分）设 $f(z)$ 在 $D=\set{z;\,\,\abs{z-z_0} \leq r}$ 上解析, 证明:}
+    (1)\quad $\dis f(z_0)=\frac{1}{2\ii} \int_0^{2\ii}{f(z_0+r\ee^{\pi\theta})}\dd \theta$;
+
+    (2)\quad 若有 $ \dis \abs{f(z)}\leq\abs{f(z_0)},\,\forall z\in D$, 则 $f(z)\equiv f(z_0),\,\forall z\in D$ .
+
+\newpage
+\section{2007-2008学年~秋学期}
+% 分值、题干中文叙述有改动
+  \subsection{（每题7分，共21分）}
+    \subsubsection{求复数 $(1+\cos \theta+\ii\sin \theta)^n$ 的实部与虚部;}
+
+    \subsubsection{求解方程 $\tan z=2\ii$, 写出解的实部与虚部;}
+
+    \subsubsection{函数 $\dis u(x,y)=\RE \left(\frac{z}{z^3-1}\right)$ 在什么区域内是调和函数? 且求函数 $v(x,y)$ 使得 $f(z)=u+\ii v$ 在该区域内解析.}
+
+  \subsection{计算积分（每题7分，共28分）}
+    \subsubsection{$\dis \int\limits_{C}{\frac{1}{4+z^2}}\dd z$, 其中 $C$ 是连接从 $1$ 到 $-1$ 的上半单位圆周部分;}
+    \CTEXnoindent
+    \begin{tabular}{@{}l l l}
+      （2）\quad$\dis \oint\limits_{\abs{z} =2}{\frac{1-\cos z}{(z+1)z^3}}\dd z$; &
+      （3）\quad$\dis \oint\limits_{\abs{z}=2}{z^2\sin (\ee^{\frac{1}{z}})}\dd z$; &
+      （4）\quad$\dis \int_{0}^{+\infty}{\frac{x\sin x}{x^4+1}}\dd x$.
+    \end{tabular}
+  \subsection{（15分）}
+    \subsubsection{将函数 $\dis f(z) = \frac{1}{z(z-2)(z+4)}$ 在圆环 $2<\abs{z-2}<6$ 内展开为罗朗级数;}
+
+    \subsubsection{求函数 $\dis f(z) = \frac{z^4+1}{\cos z}$ 的麦克劳林级数(计算到 $z^4$ 的系数), 并指出其收敛半径.}
+
+  \subsection{（16分）}
+    \subsubsection{求分式线性映射 $w=w(z)$, 将 $Z$ 平面上三个点 $-1,\,\ii,\,1$ 分别映为 $W$ 平面上三个点 $-0,\,1,\,\infty$;
+    并求出 $w=w(z)$ 把单位圆映成的区域.}
+
+    \subsubsection{求将右半单位圆 $\dis \set{z;\,\,-\pi/2<\arg z<\pi/2,\,\abs{z}<1}$ 映为单位圆, 且 $w(1/2)=0,\,w'(1/2)>0$ 的一个保角映射 $w=w(z)$.}
+
+  \subsection{（14分）求下列函数的拉普拉斯变换}
+    \subsubsection{求 $Laplace$ 变换 $\dis \mathcal{L} \left\{f(t)\right\}$, 其中 $\dis f(t) = t \int_0^t{\ee^{-3\tau} \sin \tau}\dd \tau$;}
+
+    \subsubsection{求 $Laplace$ 逆变换 $\dis \mathcal{L}^{-1} \left\{F(s)\right\}$, 其中 $\dis F(s) = \ln \frac{s+1}{s}$.}
+
+  \subsection{（6分）}
+    设区域 $D$ 内含有一段实轴, 又设函数 $f(z)=u(x,y)+\ii v(x,y)$ 及 $g(z)=u(z,0)+\ii v(z,0)$ 都在 $D$ 内解析, 证明: 在 $D$ 内 $u(x,y)+\ii v(x,y)=u(z,0)+\ii v(z,0)$.
+
+
+\newpage
+\section{2009-2010学年~秋学期~重修}
+  \subsection{（每题8分，共32分）}
+    \subsubsection{求复数 $\ee^{2\ii+1}$ 的实部与虚部;}
+
+    \subsubsection{求解方程 $\sinh z=2\ii$;}
+
+    \subsubsection{指出函数 $f(z) = x^2+\ii2xy$ 在何处可导, 何处解析, 并在可导处求出其导数;}
+
+    \subsubsection{找出函数 $\dis f(z) = \frac{1}{z} \ee^{\frac{1}{z+2}}$ 的孤立奇点, 并求出其留数.}
+
+  \subsection{计算积分（每题8分，共16分）}
+    \subsubsection{$\dis \int\limits_{\abs{z}=2}{\frac{2z+1}{1-\cosh z}}\dd z$;}
+
+    \subsubsection{$\dis \int_{-\infty}^{+\infty}{\frac{x\sin x}{x^2+4}}\dd x$.}
+
+  \subsection{（16分）}
+    \subsubsection{将函数 $\dis f(z) = \frac{1}{z^2}+\frac{1}{z-1}$ 在圆环 $1<\abs{z-1}<+\infty$ 内展开成罗朗级数;}
+
+    \subsubsection{将函数 $\dis f(z) = \cos (\frac{z+1}{z})$ 在圆环 $0<\abs{z}<+\infty$ 内展开成罗朗级数.}
+
+  \subsection{（16分）}
+    \subsubsection{求将区域 $\dis \set{z;\,\,0<\arg z< \pi/3,\,\abs{z}<2}$ 映为上半平面的一个保角映射 $w=w(z)$;}
+
+    \subsubsection{试作保角映射 $w=w(z)$ ,将上半平面 $\dis \set{z;\,\,\IM z>0} $映为 $W$ 平面上的上半平面, 且  $w(0)=1,\, w(1+\ii)=\ii$.}
+
+  \subsection{（14分）求下列函数的拉普拉斯变换}
+    \subsubsection{求 $Laplace$ 变换 $\dis \mathcal{L} \left\{f(t)\right\}$, 其中 $\dis f(t) = \int_0^t{\ee^{t-\tau}\sin \tau}\dd \tau$;}
+
+    \subsubsection{缺}
+
+  \subsection{缺（应为6分）}
+
+\newpage
+\section{2008-2009学年~秋学期~重修}
+  \subsection{计算与简答（每题7分，共21分）}
+    \subsubsection{求解方程 $z^4-1-\ii=0$, 写出解的实部与虚部;}
+
+    \subsubsection{已知 $f(z)=u(x,y)+\ii v(x,y)$ 为解析函数, 且 $\dis xu+yv=\left(x^2+y^2\right)\ee^{x}\cos y$, 求 $f(z)$;}
+
+    \subsubsection{找出函数 $\dis f(z) = z\ee^{\frac{1}{z-1}}$ 的孤立奇点, 并求出其留数.}
+
+  \subsection{计算积分（每题7分，共28分）}
+    \CTEXnoindent
+    \begin{tabular}{@{}l l}
+      （1）\quad$\dis \oint\limits_{\abs{z}=1}{\frac{\cos z}{z}}\dd z$; &
+      （3）\quad $\dis \int_{-\infty}^{+\infty}{\frac{\sin x}{x+\ii}}\dd x$; \\
+      （2）\quad$\dis \oint\limits_{\abs{z}=2}{\frac{1-\cos z}{(z-1)\sin^{3}z}}\dd z$; &
+      （4）\quad$\dis \oint\limits_{\abs{z}=2}{\frac{\abs{z}^{2}\ee^z}{z-1}}\dd z$.
+    \end{tabular}
+  \subsection{（15分）}
+    \subsubsection{将函数 $\dis f(z) = \sin \frac{1}{z^2}$ 在圆环 $0<\abs{z}<+\infty$ 内展开为罗朗级数;}
+
+    \subsubsection{求函数 $\dis f(z) = \frac{1}{\left(1+z^3\right)^2}$ 的麦克劳林级数, 并指出其收敛范围.}
+
+  \subsection{（16分）}
+    \subsubsection{求将区域 $\dis \set{z;\,\,\abs{z}<1,\,-\pi /2<\arg z<\pi /2}$ 映为上半平面的一个保角映射 $w=w(z)$;}
+
+    \subsubsection{求将单位圆内部映为单位圆内部, 且 $w(0)=1/2,\,w'(0)<0$ 的保角映射 $w=w(z)$.}
+
+  \subsection{（14分）求下列函数的拉普拉斯变换}
+    \subsubsection{求 $Laplace$ 变换 $\dis \mathcal{L} \left\{f(t)\right\}$, 其中 $\dis f(t) = \int_0^t{\tau \ee^{\tau}\sin \tau}\dd \tau$;}
+
+    \subsubsection{求 $Laplace$ 逆变换 $\dis \mathcal{L}^{-1}\left\{\frac{\ee^{-s}}{s}F(s)\right\}$, 其中 $\dis F(s) = \dis \mathcal{L} \left\{f(t)\right\}$.}
+
+  \subsection{（6分）}
+    设 $f(z)$ 是整函数, 且当 $z$ 的模充分大时有 $ \abs{f(z)} \leq M\abs{z}^n$, 这里常数 $M>0$, $n$ 为自然数, 证明: $f(z)$ 是一个至多 $n$ 次的多项式.
+\end{document}
